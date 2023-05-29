@@ -1,19 +1,10 @@
 # 实验：基于主成分分析（PCA）的人脸识别
 
 # 导库
-import os
-import cv2
 import math
-import torch
-import random
 import numpy as np
 import pandas as pd
-import torch.nn as nn
-import scipy.io as scio
 from numpy import linalg
-from random import shuffle
-from collections import Counter
-import matplotlib.pyplot as plt
 
 # 定义PCA类
 class PCA():
@@ -45,12 +36,12 @@ def train():
         labels = pd.read_excel(label_path, header=None).values                      # 读取标签
 
         # 划分训练集和测试集（按7:4划分）
-        for i in range(0, 8):
+        for i in range(0, 7):
             for items in imgs[i :: 11]:                                             # 训练集图像
                 train_img.append(items)
             for items in labels[i :: 11]:                                           # 训练集标签
                 train_label.append(items)
-        for i in range(7, 12):
+        for i in range(7, 11):
             for items in imgs[i :: 11]:                                             # 测试集图像
                 test_img.append(items)
             for items in labels[i :: 11]:                                           # 测试集标签

@@ -1,12 +1,10 @@
 # 实验：图像灰度变换与空间采样
 
-import torch
-import torchvision.transforms as transforms
-import numpy as np
-import matplotlib.pyplot as plt
 import cv2
+import numpy as np
+import torchvision.transforms as transforms
 
-# 读取我老婆初雪的图像
+# 读取图像
 img_gray = cv2.imread('images/input_images/my_wife.jpg', flags=0)  # 灰度图
 img_color = cv2.imread('images/input_images/my_wife.jpg', flags=1)  # 彩色图
 
@@ -87,25 +85,3 @@ key6 = cv2.waitKey()
 img_hsv = cv2.cvtColor(img_color, cv2.COLOR_BGR2HSV)
 cv2.imshow('img_hsv', img_hsv)
 key7 = cv2.waitKey()
-
-# 保存图片
-cv2.imwrite(r'images/output_images/img_gray.jpg', img_gray)
-cv2.imwrite(r'images/output_images/img_color.jpg', img_color)
-cv2.imwrite(r'images/output_images/dst1.jpg', dst1)
-cv2.imwrite(r'images/output_images/dst2.jpg', dst2)
-cv2.imwrite(r'images/output_images/dst3.jpg', dst3)
-cv2.imwrite(r'images/output_images/dst4.jpg', dst4)
-cv2.imwrite(r'images/output_images/dst5.jpg', dst5)
-cv2.imwrite(r'images/output_images/dst_4.jpg', dst_4)
-cv2.imwrite(r'images/output_images/dst_8.jpg', dst_8)
-cv2.imwrite(r'images/output_images/dst_16.jpg', dst_16)
-cv2.imwrite(r'images/output_images/dst_256.jpg', dst_256)
-cv2.imwrite(r'images/output_images/add.jpg', img_add)
-cv2.imwrite(r'images/output_images/min.jpg', img_min)
-cv2.imwrite(r'images/output_images/mul.jpg', img_mul)
-cv2.imwrite(r'images/output_images/dev.jpg', img_dev)
-cv2.imwrite(r'images/output_images/and.jpg', img_and)
-cv2.imwrite(r'images/output_images/or.jpg', img_or)
-cv2.imwrite(r'images/output_images/xor.jpg', img_xor)
-cv2.imwrite(r'images/output_images/not.jpg', img_not)
-cv2.imwrite(r'images/output_images/img_hsv.jpg', img_hsv)
