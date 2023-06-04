@@ -126,4 +126,3 @@ key3 = cv2.waitKey()
     plt.title('Segmented Image')
     plt.show()
 '''
-
