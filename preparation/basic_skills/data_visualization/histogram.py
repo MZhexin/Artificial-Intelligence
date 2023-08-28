@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 直方图（Histogram）
+# 参考教程：https://www.bilibili.com/video/BV1wP411k7NM?p=4
 '''
     （1）特点：数据的分布情况，用矩形条表示数据频率
     （2）用途：分析数据的分布和形状，检测数据的偏态和峰值
