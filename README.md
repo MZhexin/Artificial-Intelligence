@@ -1,1 +1,1 @@
-# 深度学习笔记  Deep Learning Notes
+# 人工智能技术的学习笔记  Notes of AI skills
