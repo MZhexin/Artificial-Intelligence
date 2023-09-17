@@ -8,7 +8,6 @@
 
 # 导库
 import cv2
-import numpy as np
 import matplotlib.pyplot as plt
 
 # 读取图像
@@ -26,7 +25,7 @@ plt.axis('off')
 plt.title('Original Image')
 plt.subplot(3, 2, 2)
 plt.hist(img.ravel(), 256)
-plt.title('Original Gray Histogram')
+plt.title('Gray Histogram')
 plt.xlabel('Pixel Value')
 plt.ylabel('Proportion')
 
