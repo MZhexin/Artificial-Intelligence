@@ -94,7 +94,7 @@ def OtsuMethod(img):
     return threshold, new_img
 
 # 读取原图
-img = cv2.imread("images/input_images/my_wife.jpg", flags=0)
+img = cv2.imread("images/my_wife.jpg", flags=0)
 cv2.imshow('Oriinal Image', img)
 key1 = cv2.waitKey()
 

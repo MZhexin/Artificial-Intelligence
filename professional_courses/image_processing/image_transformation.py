@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread('images/input_images/my_wife.jpg', 0)  # 读取灰度图像
+img = cv2.imread('images/my_wife.jpg', 0)  # 读取灰度图像
 
 '''
     知识点：

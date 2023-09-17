@@ -6,9 +6,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 读取图像（文本图像和指纹图像来自学校老师给的数据）
-img = cv2.imread("images/input_images/my_wife.jpg", 0)                      # 明日方舟干员初雪的美图
-script = cv2.imread('images/input_images/script.tif', 0)                    # 包含字符残缺的文本图像
-fingerprint = cv2.imread('images/input_images/fingerprint.tif', 0)          # 含有杂点的指纹图像
+img = cv2.imread("images/my_wife.jpg", 0)                      # 明日方舟干员初雪的美图
+script = cv2.imread('images/script.tif', 0)                    # 包含字符残缺的文本图像
+fingerprint = cv2.imread('images/fingerprint.tif', 0)          # 含有杂点的指纹图像
 
 # 设置卷积核
 kernel = np.ones((3, 3),np.uint8)

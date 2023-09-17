@@ -3,7 +3,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('images/input_images/my_wife.jpg', 0)
+img = cv2.imread('images/my_wife.jpg', 0)
 '''
 Sobel函数求完导数后会有负值，还有会大于255的值。
 而原图像是uint8，即8位无符号数(范围在[0,255])，所以Sobel建立的图像位数不够，会有截断。

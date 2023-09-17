@@ -5,8 +5,8 @@ import numpy as np
 import torchvision.transforms as transforms
 
 # 读取图像
-img_gray = cv2.imread('images/input_images/my_wife.jpg', flags=0)  # 灰度图
-img_color = cv2.imread('images/input_images/my_wife.jpg', flags=1)  # 彩色图
+img_gray = cv2.imread('images/my_wife.jpg', flags=0)  # 灰度图
+img_color = cv2.imread('images/my_wife.jpg', flags=1)  # 彩色图
 
 # 显示图像
 cv2.imshow('img_gray', img_gray)

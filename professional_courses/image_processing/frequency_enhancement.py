@@ -25,7 +25,7 @@ def blpf(image, d, n):
     new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift * transfor_matrix)))  # 取绝对值
     return new_img  # 返回新图像
 
-img = cv2.imread('images/input_images/my_wife.jpg')  # 读取图像
+img = cv2.imread('images/my_wife.jpg')  # 读取图像
 # N阶巴特沃斯低通滤波器
 img_blpf_1 = blpf(img, 20, 1)  # 一阶
 img_blpf_2 = blpf(img, 20, 2)  # 二阶

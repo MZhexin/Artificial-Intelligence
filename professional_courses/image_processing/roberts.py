@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 读取图像
-img = cv2.imread('images/input_images/my_wife.jpg', 0)
+img = cv2.imread('images/my_wife.jpg', 0)
 
 # roberts算子
 kernelx = np.array([[-1, 0], [0, 1]], dtype=int)

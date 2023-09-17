@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 输入图像
-img = cv2.imread('images/input_images/my_wife.jpg', 0)
+img = cv2.imread('images/my_wife.jpg', 0)
 
 # kernel
 kernelX = np.array([[1, 1, 1], [0, 0, 0], [-1, -1, -1]], dtype=int)
