@@ -1,10 +1,8 @@
 # 实验：手写数字识别
 
 # 导入库
-import torch
 import numpy as np
 import matplotlib.pyplot as plt
-import torch.nn
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
