@@ -11,7 +11,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # 读取图像
-image = cv2.imread('images/elevator.jpg', 0)
+image = cv2.imread('images/homework1/elevator.jpg', 0)
 img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # 设置画布
