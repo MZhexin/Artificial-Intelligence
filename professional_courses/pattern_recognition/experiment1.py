@@ -1,7 +1,7 @@
 # 实验1：基于Bayes的手写字符识别
-# 代码参考：http://t.csdnimg.cn/vU2Ev
 
 # 导库
+import cv2
 import numpy as np
 from struct import unpack                                                                                   # 用来处理二进制数据
 
@@ -21,9 +21,9 @@ def load_idx1_ubyte(path):
 def normalize_image(image):
     return image.astype(np.float32) / 255.0
 
-# 特征提取
+# 特征提取方法1
 # 参数：图像、提取完特征后想要的尺寸、阈值
-def feature_extraction(images, side_length=28, threshold=0.2):
+def feature_extraction1(images, side_length=28, threshold=0.2):
     num = 28 // side_length                                                                                 # 计算平滑时应该使用的步长（原图像尺寸整除目标尺寸并向下取整）
     features = np.empty((images.shape[0], side_length, side_length), dtype=np.float32)                      # 创建空数组来存储特征
     for i in range(images.shape[0]):                                                                        # 对每张图像
@@ -92,8 +92,8 @@ def main():
     test_images = normalize_image(test_images)                                                              # 测试图像归一化
 
     # 特征提取
-    train_features = feature_extraction(train_images)                                                       # 训练图像特征提取
-    test_features = feature_extraction(test_images)                                                         # 训练图像特征提取
+    train_features = feature_extraction1(train_images)                                                      # 训练图像特征提取
+    test_features = feature_extraction1(test_images)                                                        # 训练图像特征提取
 
     priori_probs, condition = train_naive_bayes(train_features, train_labels)                               # 概率
     accuracy = evaluate_model(test_features, test_labels, priori_probs, condition)                          # 准确率
