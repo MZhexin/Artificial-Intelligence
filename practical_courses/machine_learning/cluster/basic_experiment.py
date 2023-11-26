@@ -33,13 +33,14 @@ class KMeans():
         # 欧式距离
         if distance_type == 'euclidean':
             return np.linalg.norm(diff, axis=2)
+        # 曼哈顿距离
         elif distance_type == 'manhattan':
             return np.sum(np.abs(diff), axis=2)
 
     def fit(self, x, k=3, epochs=20, distance_type='euclidean'):
         # 初始化
-        n_samples, n_features = x.shape
-        centroids = x[np.random.choice(n_samples, k, replace=False)]
+        n_samples, n_features = x.shape                                                                                 # 读取样本数和特征数
+        centroids = x[np.random.choice(n_samples, k, replace=False)]                                                    # 初始化聚类中心
 
         for epoch in tqdm(range(epochs)):
             distances = self.calc_distance(x[:, np.newaxis, :] - centroids, distance_type=distance_type)                # 计算距离
