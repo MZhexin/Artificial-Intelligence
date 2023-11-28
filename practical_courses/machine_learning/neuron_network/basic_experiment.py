@@ -68,13 +68,6 @@ class Net:
             output = self.forward(x)
             self.backward(x, y, lr)
 
-    def calculate_loss(self, x, y):
-        samples, features = x.shape
-        one_hot_y = np.zeros((samples, self.final_output.shape[1]))
-        one_hot_y[range(samples), y] = 1
-        loss = -np.sum(np.log(self.final_output) * one_hot_y) / m
-        return loss
-
     def predict(self, x):
         return np.argmax(self.forward(x), axis=1)
 
