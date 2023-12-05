@@ -90,30 +90,30 @@ def main():
     output_size = len(np.unique(y_train))
 
     # 实例化模型并训练
-    # 10层隐藏层
+    # 10个隐藏层节点
     model1 = Net(input_size, hidden_size1, output_size)
     model1.train(x_train, y_train, epochs=2000, lr=0.1)
 
-    # 100层隐藏层
+    # 100个隐藏层节点
     model2 = Net(input_size, hidden_size2, output_size)
     model2.train(x_train, y_train, epochs=2000, lr=0.1)
 
-    # 1000层隐藏层
+    # 1000个隐藏层节点
     model3 = Net(input_size, hidden_size3, output_size)
     model3.train(x_train, y_train, epochs=2000, lr=0.1)
 
     # 预测并评估模型
     y_pred1 = model1.predict(x_test)
     accuracy1 = accuracy_score(y_test, y_pred1)
-    print(f"Accuracy (10 Hidden Layers): {accuracy1}")
+    print(f"Accuracy (10 Hidden Neurons): {accuracy1}")
 
     y_pred2 = model2.predict(x_test)
     accuracy2 = accuracy_score(y_test, y_pred2)
-    print(f"Accuracy (100 Hidden Layers): {accuracy2}")
+    print(f"Accuracy (100 Hidden Neurons): {accuracy2}")
 
     y_pred3 = model3.predict(x_test)
     accuracy3 = accuracy_score(y_test, y_pred3)
-    print(f"Accuracy (1000 Hidden Layers): {accuracy3}")
+    print(f"Accuracy (1000 Hidden Neurons): {accuracy3}")
 
 if __name__ == '__main__':
     main()
