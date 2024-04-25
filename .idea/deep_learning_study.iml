@@ -2,7 +2,7 @@
 <module version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="E:\Anaconda\envs\AI_Study (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="AI_Study" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
